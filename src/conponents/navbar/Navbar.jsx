@@ -6,7 +6,8 @@ import { AuthProvider } from "../../authProvider/FirebaseProvider";
 
 const Navbar = () => {
     const {user,logOut}=useContext(AuthProvider)
-    
+
+    // console.log(user)
     const links=<>
     <li>
         <NavLink to='/'>Home</NavLink>
@@ -60,7 +61,7 @@ const Navbar = () => {
                 <Link to='/profile'>Profile</Link>
                 </li>
                 <li></li>
-                <li><p  onClick={()=>logOut()}>Logout </p></li>
+                <li><button onClick={()=>logOut()}>Logout </button></li>
                 
             </ul>
             </div>

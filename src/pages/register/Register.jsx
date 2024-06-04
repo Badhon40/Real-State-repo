@@ -7,18 +7,18 @@ import 'react-toastify/dist/ReactToastify.css';
 import { IoEyeSharp,IoEyeOffSharp } from "react-icons/io5";
 
 
+
 const Register = () => {
 
-    const {createUser,setUser,user}=useContext(AuthProvider)
+    const {createUser}=useContext(AuthProvider)
 
     const[showPassword,setShowPassword]=useState(false)
-
-    console.log(user)
     const {
         register,
-        handleSubmit,
+        handleSubmit, 
         formState: { errors },
       } = useForm()
+
       const onSubmit = (data) => {
         const {email,password}=data;
 
@@ -36,11 +36,24 @@ const Register = () => {
         }
         
          createUser(email,password)
-         .then(result=>{setUser(result.user)
+         .then(
            toast.success("User got registered")
-         })
-         .then(error=>{
-            console.log(error)
+         )
+         .catch(error=>{
+            switch (error.code) {
+                case 'auth/email-already-in-use':
+                    toast.error("Email is already in use");
+                    break;
+                case 'auth/invalid-email':
+                    toast.error("Invalid email address");
+                    break;
+                case 'auth/weak-password':
+                    toast.error("Password is too weak");
+                    break;
+                default:
+                    toast.error(`Error: ${error.message}`);
+                    break;
+            }
          })
 
       }
@@ -80,7 +93,7 @@ const Register = () => {
                         <a rel="noopener noreferrer" href="#">Forgot Password?</a>
                     </div>
                 </div>
-                <button className="btn block w-full p-3 text-center rounded-lg dark:text-gray-50 dark:bg-violet-600">Sign Up</button>
+                <button className="btn block w-full p-3 text-center rounded-lg dark:text-gray-50 dark:bg-red-600">Sign Up</button>
             </form>
             
             <p className="text-xs text-center sm:px-6 dark:text-gray-600">Do have an account?
