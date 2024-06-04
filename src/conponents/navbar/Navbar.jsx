@@ -18,9 +18,7 @@ const Navbar = () => {
     <li>
         <NavLink to='/contactUs'>Contact Us</NavLink>
     </li>
-    {
-        user && <li><NavLink to='/profile'>Update Profile</NavLink></li>
-    }
+   
    
     </>
     

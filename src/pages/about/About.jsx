@@ -1,5 +1,5 @@
-import Footer from "../../conponents/footer/Footer";
-import Navbar from "../../conponents/navbar/Navbar";
+import Footer from '../../conponents/footer/Footer';
+import 'animate.css';
 
 const About = () => {
     return (
@@ -33,17 +33,17 @@ const About = () => {
             <section className="team mb-8">
                 <h2 className="text-3xl font-bold mb-4">Meet the Team</h2>
                 <div className="team-members grid grid-cols-1 md:grid-cols-3 gap-4">
-                    <div className="team-member text-center">
+                    <div className="team-member text-center animate__animated animate__bounce animate__repeat-2">
                         <img src="https://i.ibb.co/f09XNtg/team-3.png" alt="Team Member 1" className="w-full rounded-full mb-2" />
                         <h3 className="text-2xl font-bold">John Doe</h3>
                         <p>CEO & Founder</p>
                     </div>
-                    <div className="team-member text-center">
+                    <div className="team-member text-center animate__animated animate__bounce animate__repeat-2">
                         <img src="https://i.ibb.co/fGQYQxQ/team-2.png" alt="Team Member 2" className="w-full rounded-full mb-2" />
                         <h3 className="text-2xl font-bold">Jane Smith</h3>
                         <p>Head of Sales</p>
                     </div>
-                    <div className="team-member text-center">
+                    <div className="team-member text-center animate__animated animate__bounce animate__repeat-2">
                         <img src="https://i.ibb.co/GdVt4dV/team-1.png" alt="Team Member 3" className="w-full rounded-full mb-2" />
                         <h3 className="text-2xl font-bold">Emily Johnson</h3>
                         <p>Marketing Director</p>

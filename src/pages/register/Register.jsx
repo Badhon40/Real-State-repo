@@ -1,10 +1,11 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { useContext, useState } from "react";
 import { AuthProvider } from "../../authProvider/FirebaseProvider";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { IoEyeSharp,IoEyeOffSharp } from "react-icons/io5";
+import { updateProfile } from "firebase/auth";
 
 
 
@@ -13,6 +14,8 @@ const Register = () => {
     const {createUser}=useContext(AuthProvider)
 
     const[showPassword,setShowPassword]=useState(false)
+    const location=useLocation()
+        const navigate=useNavigate()
     const {
         register,
         handleSubmit, 
@@ -36,11 +39,17 @@ const Register = () => {
         }
         
          createUser(email,password)
-         .then(
-           toast.success("User got registered")
-          
-         )
-         .catch(error=>{
+         .then((result)=>{
+            toast.success("Register Success Fully")
+            updateProfile(result.user,{
+                displayName:name,
+            })
+            .then(
+                navigate(location?.state ? location.state : '/')
+            )
+            .catch()
+         })
+            .catch(error=>{
             switch (error.code) {
                 case 'auth/email-already-in-use':
                     toast.error("Email is already in use");
