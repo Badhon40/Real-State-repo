@@ -40,8 +40,7 @@ const Register = () => {
            toast.success("User got registered")
          })
          .then(error=>{
-            alert(error.message)
-            return
+            console.log(error)
          })
 
       }

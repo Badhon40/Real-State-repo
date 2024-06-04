@@ -1,4 +1,4 @@
-import { createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, signOut } from "firebase/auth";
+import { GoogleAuthProvider, TwitterAuthProvider, createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut } from "firebase/auth";
 import { createContext, useEffect, useState } from "react";
 import auth from './../firebase/firebase.config';
 
@@ -16,6 +16,15 @@ const FirebaseProvider = ({children}) => {
 
     const signIn=(email,password)=>{
         return signInWithEmailAndPassword(auth,email,password)
+    }
+
+    const googleProvider=new GoogleAuthProvider()
+    const googleSignIn=()=>{
+      return  signInWithPopup(auth,googleProvider)
+    }
+    const twitterProvider=new TwitterAuthProvider()
+    const twitterSignIn=()=>{
+        return signInWithPopup(auth,twitterProvider)
     }
 
    const logOut=()=>{
@@ -40,7 +49,9 @@ const FirebaseProvider = ({children}) => {
         setUser,
         createUser,
         signIn,
-        logOut
+        logOut,
+        googleSignIn,
+        twitterSignIn
     }
     return (
         <AuthProvider.Provider value={info} >
