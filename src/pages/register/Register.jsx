@@ -38,6 +38,7 @@ const Register = () => {
          createUser(email,password)
          .then(
            toast.success("User got registered")
+          
          )
          .catch(error=>{
             switch (error.code) {

@@ -7,7 +7,7 @@ const Details = () => {
     const {id}=useParams()
     const intId=parseInt(id)
     const card=cards.find(card=>card.id==intId)
-    // console.log(cards,intId)
+   console.log(cards,intId)
     return (
         <div>
            <div className="p-5 mx-auto sm:p-10 md:p-16 dark:bg-gray-100 dark:text-gray-800">

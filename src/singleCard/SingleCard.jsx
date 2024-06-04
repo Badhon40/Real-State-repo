@@ -11,7 +11,7 @@ const SingleCard = ({data}) => {
                 <h2 className="card-title">{estate_title}</h2>
                 <p>{description}</p>
                 <div className="card-actions">
-                <Link to={`/card/${id}`}><button className="btn bg-red-600 text-white">View Details</button></Link>
+                <Link to={`/card/${id}`}><p className="btn bg-red-600 text-white">View Details</p></Link>
                 </div>
             </div>
             </div>

@@ -8,7 +8,9 @@ import Footer from "../../conponents/footer/Footer";
 
 const Home = () => {
     const data=useLoaderData()
-    const [seeMore,setSeeMore]=useState(3)
+    const [seeMore,setSeeMore]=useState(false)
+    const [card,setCard]=useState(3)
+    
     // console.log(data)
     return (
         <div>
@@ -21,13 +23,16 @@ const Home = () => {
 
            <div className="grid md:grid-cols-3 gap-4 justify-center px-4">
             {
-               data.slice(0,seeMore).map(details=><SingleCard key={details.id} data={details}></SingleCard>)
+               data.slice(0,card).map(details=><SingleCard key={details.id} data={details}></SingleCard>)
             }
 
             
            </div>
-           <div className="text-center mt-10">
-           <button onClick={()=>setSeeMore(data.length)} className="btn btn-success text-white {} ">See more</button>
+           <div onClick={()=>setSeeMore(!seeMore)} className="text-center mt-10">
+           {
+             !seeMore ? <button className="btn bg-red-600 text-white" onClick={()=>setCard(data.length)}>See more</button>:<button className="btn bg-red-600 text-white" onClick={()=>setCard(3)}> See less</button>
+
+           }
            </div>
 
            <Footer></Footer>
