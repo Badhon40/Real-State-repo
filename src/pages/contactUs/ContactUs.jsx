@@ -1,5 +1,6 @@
-import '../../../src/App.css'
+import 'swiper/css'
 import Footer from '../../conponents/footer/Footer';
+
 
 const ContactUs = () => {
     return (
@@ -9,7 +10,7 @@ const ContactUs = () => {
                 <h2 className="text-3xl font-bold mb-4">Community Involvement</h2>
                 <p>We believe in giving back to the community. SALORD is actively involved in various charitable initiatives and sustainability projects, aiming to make a positive impact on society.</p>
             </section>
-
+            
             <section className="contact mb-8">
                 <h2 className="text-3xl font-bold mb-4">Contact Us</h2>
                 <p>If you have any questions or need further information, please don't hesitate to contact us.</p>
@@ -35,7 +36,6 @@ const ContactUs = () => {
             </section>
            
         </div>
-        
         <Footer></Footer>
        </div>
     );

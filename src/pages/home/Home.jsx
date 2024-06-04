@@ -3,6 +3,7 @@ import Hero from "../../conponents/hero/Hero";
 import SingleCard from "../../singleCard/SingleCard";
 import { useState } from "react";
 import Footer from "../../conponents/footer/Footer";
+import Swipers from "../../conponents/swiper/Swipers";
 
 
 
@@ -15,6 +16,10 @@ const Home = () => {
     return (
         <div>
            <Hero></Hero>
+           <div className="text-center py-10">
+            <h1 className="text-4xl font-bold mb-4"> Our Partners</h1>
+            <Swipers></Swipers>
+           </div>
 
            <div className="text-center py-10">
             <h1 className="text-4xl font-bold mb-4">The States</h1>
