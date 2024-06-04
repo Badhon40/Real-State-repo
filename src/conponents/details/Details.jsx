@@ -1,5 +1,6 @@
 import { useLoaderData, useParams } from "react-router-dom";
 import Footer from "../footer/Footer";
+import { Helmet } from "react-helmet-async";
 
 
 const Details = () => {
@@ -10,6 +11,7 @@ const Details = () => {
    console.log(cards,intId)
     return (
         <div>
+            <Helmet><title>SALORD | Detail</title></Helmet>
            <div className="p-5 mx-auto sm:p-10 md:p-16 dark:bg-gray-100 dark:text-gray-800">
                 <div className="flex flex-col max-w-3xl mx-auto overflow-hidden rounded">
                     <img src={card.image} alt="" className="w-full h-60 sm:h-96 dark:bg-gray-500" />

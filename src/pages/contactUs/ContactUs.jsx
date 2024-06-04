@@ -1,11 +1,13 @@
 import 'swiper/css'
 import Footer from '../../conponents/footer/Footer';
+import { Helmet } from 'react-helmet-async';
 
 
 const ContactUs = () => {
     return (
        <div>
-         <div className="about-page container mx-auto px-4 py-8 md:px-20">
+        <Helmet><title>SALORD | Contact Us</title></Helmet>
+         <div className="about-page container h-[calc(100vh-400px)] mx-auto px-4 py-8 md:px-20">
              <section className="community mb-8">
                 <h2 className="text-3xl font-bold mb-4">Community Involvement</h2>
                 <p>We believe in giving back to the community. SALORD is actively involved in various charitable initiatives and sustainability projects, aiming to make a positive impact on society.</p>

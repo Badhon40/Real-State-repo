@@ -2,8 +2,8 @@
 const Footer = () => {
     return (
         <footer className="px-4 divide-y dark:bg-gray-100 dark:text-gray-800 mt-20">
-            <div className="container flex flex-col justify-between px-20 py-10 mx-auto space-y-8 lg:flex-row lg:space-y-0">
-            <h1 className="text-3xl font-bold"><span className="text-6xl text-red-600 ">S</span>ALORD</h1>
+            <div className="container flex flex-col justify-between lg:px-10 py-10 mx-auto space-y-8 md:flex-row lg:space-y-0">
+                <img src="https://i.ibb.co/LpnXSMg/logo-1.png" alt="" />
                 <div className="grid grid-cols-2 text-sm gap-x-3 gap-y-8 lg:w-2/3 sm:grid-cols-4">
                     <div className="space-y-3">
                         <h3 className="tracking-wide uppercase dark:text-gray-900">Product</h3>

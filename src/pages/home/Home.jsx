@@ -4,6 +4,7 @@ import SingleCard from "../../singleCard/SingleCard";
 import { useState } from "react";
 import Footer from "../../conponents/footer/Footer";
 import Swipers from "../../conponents/swiper/Swipers";
+import { Helmet } from "react-helmet-async";
 
 
 
@@ -15,6 +16,9 @@ const Home = () => {
     // console.log(data)
     return (
         <div>
+         <Helmet>
+          <title>SALORD | Home</title>
+         </Helmet>
            <Hero></Hero>
            <div className="text-center py-10">
             <h1 className="text-4xl font-bold mb-4"> Our Partners</h1>

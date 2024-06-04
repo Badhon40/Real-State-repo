@@ -1,9 +1,11 @@
+import { Helmet } from 'react-helmet-async';
 import Footer from '../../conponents/footer/Footer';
 import 'animate.css';
 
 const About = () => {
     return (
         <div>
+            <Helmet><title>SALORD | About</title></Helmet>
             <div className="about-page container mx-auto px-4 py-8 md:px-20">
             <section className="intro mb-8">
                 <h1 className="text-4xl font-bold mb-4">About Us</h1>

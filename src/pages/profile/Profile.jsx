@@ -1,31 +1,38 @@
+import { useContext } from "react";
+import { Helmet } from "react-helmet-async";
+import { AuthProvider } from "../../authProvider/FirebaseProvider";
 
 
 const Profile = () => {
+
+    const {user}=useContext(AuthProvider)
     return (
         <div>
-            <div className="w-full mx-auto max-w-md my-40 p-8 space-y-3 rounded-xl dark:bg-gray-50 dark:text-gray-800">
-            <h1 className="text-2xl font-bold text-center">Update Your Profile</h1>
-            <form noValidate="" action="" className="space-y-6">
-                <div className="space-y-1 text-sm">
-                    <label htmlFor="username" className="block dark:text-gray-600">Name</label>
-                    <input type="text" name="name" id="name" placeholder="Name" className="w-full px-4 py-3 rounded-md dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600 border" />
+            <Helmet><title>SALORD | Profile</title></Helmet>
+            <div className="container mx-auto p-4 md:px-10">
+            <h1 className="text-3xl font-bold mb-4 py-5">Profile</h1>
+            <div className="bg-white p-6 rounded-lg shadow-md">
+                <h2 className="text-xl font-semibold mb-2">Welcome, {user?.displayName || 'User'}!</h2>
+                <p className="mb-4">Email: {user?.email}</p>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                <div className="bg-gray-100 p-4 rounded-lg shadow-md">
+                    <h3 className="text-lg font-bold mb-2">Recent Activity</h3>
                     
                 </div>
-                <div className="space-y-1 text-sm">
-                    <label htmlFor="username" className="block dark:text-gray-600">Email</label>
-                    <input type="email" name="email" id="email" placeholder="Email" className="w-full px-4 py-3 rounded-md dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600 border" />
-                    
+
+              
+                <div className="bg-gray-100 p-4 rounded-lg shadow-md">
+                    <h3 className="text-lg font-bold mb-2">Statistics</h3>
+                    <p>Some interesting statistics here.</p>
                 </div>
-                <div className="space-y-1 text-sm">
-                    <label htmlFor="password" className="block dark:text-gray-600">Password</label>
-                    <input  type="password" name="password" id="password" placeholder="Password" className="w-full px-4 py-3 rounded-md dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600 border" />
-                    
-                    <div className="flex justify-end text-xs dark:text-gray-600">
-                        <a rel="noopener noreferrer" href="#">Forgot Password?</a>
-                    </div>
+
+                <div className="bg-gray-100 p-4 rounded-lg shadow-md">
+                    <h3 className="text-lg font-bold mb-2">Settings</h3>
+                    <p>Manage your settings here.</p>
                 </div>
-                <button className="block w-full p-3 text-center rounded-lg dark:text-gray-50 dark:bg-red-600">Update</button>
-            </form>
+                </div>
+            </div>
             </div>
         </div>
     );
