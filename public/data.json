@@ -1,0 +1,111 @@
+[
+    {
+      "id": 1,
+      "image": "https://i.ibb.co/c2362gS/home3.jpg",
+      "estate_title": "Ocean View Villa",
+      "segment_name": "Luxury",
+      "description": "A stunning villa with breathtaking ocean views.",
+      "price": "$5,000,000",
+      "status": "sale",
+      "area": "4500 sq ft",
+      "location": "Malibu, CA",
+      "facilities": ["living room", "swimming pool", "kitchen"]
+    },
+    {
+      "id": 2,
+      "image": "https://i.ibb.co/6W0PcgQ/home7.jpg",
+      "estate_title": "Penthouse Suite",
+      "segment_name": "Luxury",
+      "description": "An exquisite penthouse suite in the heart of the city.",
+      "price": "$3,200,000",
+      "status": "sale",
+      "area": "3200 sq ft",
+      "location": "New York, NY",
+      "facilities": ["living room", "swimming pool", "kitchen", "gym"]
+    },
+    {
+      "id": 3,
+      "image": "https://i.ibb.co/KjDfHVq/home2.jpg",
+      "estate_title": "Luxury Beach House",
+      "segment_name": "Luxury",
+      "description": "A beautiful beach house with private access to the beach.",
+      "price": "$4,500,000",
+      "status": "sale",
+      "area": "5000 sq ft",
+      "location": "Miami, FL",
+      "facilities": ["living room", "swimming pool", "kitchen", "garage"]
+    },
+    {
+      "id": 4,
+      "image": "https://i.ibb.co/LzzWhFy/home-3.jpg",
+      "estate_title": "Mountain Retreat",
+      "segment_name": "Luxury",
+      "description": "A peaceful retreat in the mountains with stunning views.",
+      "price": "$2,800,000",
+      "status": "sale",
+      "area": "3500 sq ft",
+      "location": "Aspen, CO",
+      "facilities": ["living room", "kitchen", "fireplace"]
+    },
+    {
+      "id": 5,
+      "image": "https://i.ibb.co/VxQXG4P/home-2.jpg",
+      "estate_title": "Modern Mansion",
+      "segment_name": "Luxury",
+      "description": "A modern mansion with state-of-the-art amenities.",
+      "price": "$6,500,000",
+      "status": "sale",
+      "area": "6000 sq ft",
+      "location": "Beverly Hills, CA",
+      "facilities": ["living room", "swimming pool", "kitchen", "home theater"]
+    },
+    {
+      "id": 6,
+      "image": "https://i.ibb.co/pryWwxf/home1.jpg",
+      "estate_title": "Country Estate",
+      "segment_name": "Luxury",
+      "description": "A grand estate in the countryside with expansive grounds.",
+      "price": "$3,800,000",
+      "status": "sale",
+      "area": "5500 sq ft",
+      "location": "Napa Valley, CA",
+      "facilities": ["living room", "swimming pool", "kitchen", "vineyard"]
+    },
+    {
+      "id": 7,
+      "image": "https://i.ibb.co/sKS8LT9/hoylee-song-7-X5-Xw-KNH-sg-unsplash.jpg",
+      "estate_title": "Urban Loft",
+      "segment_name": "Luxury",
+      "description": "A chic loft in the heart of the city with modern design.",
+      "price": "$2,200,000",
+      "status": "sale",
+      "area": "2800 sq ft",
+      "location": "San Francisco, CA",
+      "facilities": ["living room", "kitchen", "gym"]
+    },
+    {
+      "id": 8,
+      "image": "https://i.ibb.co/RQppFMq/ivy-barn-EIkozqb-AV38-unsplash.jpg",
+      "estate_title": "Lakeside Villa",
+      "segment_name": "Luxury",
+      "description": "A serene villa by the lake with beautiful surroundings.",
+      "price": "$4,000,000",
+      "status": "sale",
+      "area": "4000 sq ft",
+      "location": "Lake Tahoe, NV",
+      "facilities": ["living room", "swimming pool", "kitchen", "boat dock"]
+    },
+    {
+      "id": 9,
+      "image": "https://i.ibb.co/KVNS8Nv/akhmad-jazuli-au-FBVPW9i-IU-unsplash.jpg",
+      "estate_title": "Historic Manor",
+      "segment_name": "Luxury",
+      "description": "A historic manor with elegant architecture and design.",
+      "price": "$5,500,000",
+      "status": "sale",
+      "area": "7000 sq ft",
+      "location": "Charleston, SC",
+      "facilities": ["living room", "kitchen", "library", "garden"]
+    }
+  ]
+  

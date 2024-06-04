@@ -7,7 +7,8 @@ import { ToastContainer, toast } from 'react-toastify';
 
 
 const Login = () => {
-    const {signIn,setUser,googleSignIn,twitterSignIn}=useContext(AuthProvider)
+    const {signIn,setUser,googleSignIn,twitterSignIn,user}=useContext(AuthProvider)
+    console.log(user)
     const {
         register,
         handleSubmit,

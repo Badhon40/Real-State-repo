@@ -9,25 +9,31 @@ import auth from './../firebase/firebase.config';
 
 const FirebaseProvider = ({children}) => {
      const [user,setUser]=useState(null)
+     const [loading,setLoading]=useState(true)
 
     const createUser=(email,password)=>{
+        setLoading(true)
         return createUserWithEmailAndPassword(auth,email,password)
     }
 
     const signIn=(email,password)=>{
+        setLoading(true)
         return signInWithEmailAndPassword(auth,email,password)
     }
 
     const googleProvider=new GoogleAuthProvider()
     const googleSignIn=()=>{
+        setLoading(true)
       return  signInWithPopup(auth,googleProvider)
     }
     const twitterProvider=new TwitterAuthProvider()
     const twitterSignIn=()=>{
+        setLoading(true)
         return signInWithPopup(auth,twitterProvider)
     }
 
    const logOut=()=>{
+    setLoading(true)
     return signOut(auth)
    }
    
@@ -36,9 +42,8 @@ const FirebaseProvider = ({children}) => {
         const unSubscribe=onAuthStateChanged(auth, (currentUser) => {
             if (currentUser) {
              setUser(currentUser)
-            } else {
-             setUser(null)
-            }
+             setLoading(false)
+            } 
           });
           return ()=>{
             unSubscribe()
@@ -51,7 +56,8 @@ const FirebaseProvider = ({children}) => {
         signIn,
         logOut,
         googleSignIn,
-        twitterSignIn
+        twitterSignIn,
+        loading
     }
     return (
         <AuthProvider.Provider value={info} >
