@@ -7,9 +7,9 @@ import Register from "../pages/register/Register";
 import About from "../pages/about/About";
 import ContactUs from "../pages/contactUs/ContactUs";
 import Profile from "../pages/profile/Profile";
-import PrivateRoute from "../private/PrivateRoute";
 import Details from "../conponents/details/Details";
 import UpdateProfile from "../pages/updateProfile/UpdateProfile";
+import PrivateRoute from "../private/PrivateRoute";
 
 
 
