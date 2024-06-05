@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { Helmet } from "react-helmet-async";
 import { AuthProvider } from "../../authProvider/FirebaseProvider";
-
+import Footer from "../../conponents/footer/Footer";
 
 const Profile = () => {
 
@@ -34,6 +34,7 @@ const Profile = () => {
                 </div>
             </div>
             </div>
+            <Footer></Footer>
         </div>
     );
 };
